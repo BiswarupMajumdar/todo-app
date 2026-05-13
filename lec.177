@@ -1,0 +1,48 @@
+Here’s the **short-form version as code comments**, concise but still beginner-friendly:
+
+```python
+# Constant variable storing default file name
+FILEPATH = "todos.txt"
+
+
+def get_todos(file_path=FILEPATH):
+    """
+    Reads todos from a text file
+    and returns them as a list.
+    """
+
+    # Open file in read mode ("r")
+    # 'with' auto closes file after use
+    with open(file_path, "r") as file:
+
+        # Read all lines from file into list
+        todos_local = file.readlines()
+
+    # Return todo list
+    return todos_local
+
+
+def write_todos(todos_arg, file_path=FILEPATH):
+    """
+    Writes todo list into text file.
+    """
+
+    # Open file in write mode ("w")
+    # Old content gets overwritten
+    with open(file_path, "w") as file:
+
+        # Write list items into file
+        file.writelines(todos_arg)
+```
+
+### Quick Revision Meaning
+
+* `FILEPATH` → stores file name (`todos.txt`)
+* `def` → defines function
+* `file_path=FILEPATH` → default argument
+* `with open()` → safely opens file
+* `"r"` → read mode
+* `"w"` → write mode (overwrite file)
+* `readlines()` → returns file lines as list
+* `writelines()` → writes list into file
+* `return` → sends value back from function
