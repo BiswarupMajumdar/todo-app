@@ -1,0 +1,90 @@
+# Import GUI library and backend functions
+import PySimpleGUI as sg
+import functions
+
+
+# Create text label
+label = sg.Text("Type in a to-do")
+
+# Input box with tooltip and unique key
+# key="todo" lets us access typed text using values["todo"]
+input_box = sg.InputText(
+    tooltip="Enter todo",
+    key="todo"
+)
+
+# Add button
+add_button = sg.Button("Add")
+
+
+# Create GUI window
+window = sg.Window(
+    "My To-Do App",  # window title
+
+    # Layout = rows of widgets
+    layout=[
+        [label],
+        [input_box, add_button]
+    ],
+
+    # Set font for all widgets
+    font=("Helvetica", 20)
+)
+
+
+# Infinite event loop to keep GUI running
+while True:
+
+    # Wait for user action
+    # event -> what happened
+    # values -> widget data dictionary
+    event, values = window.read()
+
+    # Print event & values (debugging)
+    print(event)
+    print(values)
+
+    # Handle events
+    match event:
+
+        # Runs when Add button clicked
+        case "Add":
+
+            # Read existing todos from file
+            todos = functions.get_todos("todos.txt")
+
+            # Get typed todo and add newline
+            new_todo = values["todo"] + "\n"
+
+            # Add new todo to list
+            todos.append(new_todo)
+
+            # Save updated list to file
+            functions.write_todos(
+                todos,
+                "todos.txt"
+            )
+
+        # Runs when window close button (❌) clicked
+        case sg.WIN_CLOSED:
+
+            # Exit loop safely
+            break
+
+
+# Close window properly
+window.close()
+
+
+""" Quick Revision
+
+* `window.read()` → gets `(event, values)`
+* `event` → user action (`"Add"` or close)
+* `values["todo"]` → text from input box
+* `key=` → widget identifier
+* `while True` → keeps GUI running
+* `match event` → handles button clicks
+* `append()` → addso tdo to list
+* `break` → exits loop
+* `window.close()` → safely closes GUI
+"""
