@@ -87,6 +87,7 @@ def delete_task(todo_id):
         if todo["id"] != todo_id
     ]
 
+    st.session_state["completed_count"] += 1
     functions.write_todos(updated_todos)
 
 # =========================
