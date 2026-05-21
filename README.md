@@ -49,10 +49,10 @@ A desktop-based task manager built using PySimpleGUI.
 # 📸 Screenshots
 
 ## Web App
-(Add your Streamlit app screenshot here)
+<img width="1241" height="1755" alt="WebApp" src="https://github.com/user-attachments/assets/df5a2da9-0e56-4f82-ab38-f5a34ccda320" />
 
 ## GUI App
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/61f952eb-d66a-4b4f-89c5-eb9d8b36490a" />
+<img width="1920" height="1080" alt="GUI_app" src="https://github.com/user-attachments/assets/6b09a8fa-3fb4-4bfb-a7ce-fdb611b44863" />
 
 ---
 
