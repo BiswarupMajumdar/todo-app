@@ -73,13 +73,13 @@ pip install -r requirements.txt
 Run Web App:
 
 ```bash
-streamlit run web.py
+streamlit run webp.py
 ```
 
 Run GUI App:
 
 ```bash
-python gui.py
+python MAIN.py
 ```
 
 ---
@@ -87,7 +87,7 @@ python gui.py
 # 🌍 Live Demo
 
 Streamlit App:  
-(Add your deployed Streamlit link here)
+https://biswatodoapp.streamlit.app/
 
 ---
 
