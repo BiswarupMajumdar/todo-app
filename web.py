@@ -79,15 +79,15 @@ def update_todo():
 # =========================
 # 🔹 COMPLETE TODO FUNCTION
 # =========================
-def complete_task(todo_id):
-    """Mark todo as completed"""
+def delete_task(todo_id):
+    """Delete todo when checkbox is selected"""
 
-    for todo in todos:
-        if todo["id"] == todo_id:
-            todo["completed"] = True
+    updated_todos = [
+        todo for todo in todos
+        if todo["id"] != todo_id
+    ]
 
-    functions.write_todos(todos)
-
+    functions.write_todos(updated_todos)
 
 # =========================
 # 🔹 STATS CALCULATION
@@ -153,13 +153,13 @@ for todo in todos:
     with col1:
         checked = st.checkbox(
             display_text,
-            value=completed,
+            value=False,
             key=f"todo_{todo_id}"
         )
 
-        # if user checks box → mark complete
-        if checked and not completed:
-            complete_task(todo_id)
+        # if checkbox selected → delete task
+        if checked:
+            delete_task(todo_id)
             st.rerun()
 
     # =========================
