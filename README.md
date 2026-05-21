@@ -1,21 +1,120 @@
-# Python GUI To-Do App
+# 📋 Smart Task Management App
 
-A GUI-based To-Do application developed using Python and PySimpleGUI.
+A task management application built using **Python**, available in both:
 
-## Features
-- Add Todos
-- Edit Todos
-- Delete/Complete Todos
-- Live Clock
-- Popup Error Messages
+- 🖥️ **Desktop GUI Version** (PySimpleGUI)
+- 🌐 **Web Version** (Streamlit + SQLite)
 
-## Technologies Used
+The app helps users efficiently manage daily tasks with priority levels, due dates, analytics, and task tracking.
+
+---
+
+# 🚀 Features
+
+## 🌐 Web App (Streamlit)
+
+- Add, edit, and delete tasks
+- Task priority support (High / Medium / Low)
+- Due date selection
+- SQLite database integration
+- Task analytics dashboard
+- Progress tracking
+- Persistent task storage
+- Deployed on Streamlit Cloud
+
+### Tech Stack
+- Python
+- Streamlit
+- SQLite
+- Pandas
+
+---
+
+## 🖥️ GUI App (Desktop Version)
+
+A desktop-based task manager built using PySimpleGUI.
+
+### Features
+- Add tasks
+- Update task list
+- Simple and clean UI
+- Lightweight desktop experience
+
+### Tech Stack
 - Python
 - PySimpleGUI
 
-## Screenshots
-(Add screenshots here)
+---
 
-## How to Run
-1. Install PySimpleGUI
-2. Run main.py
+# 📸 Screenshots
+
+## Web App
+(Add your Streamlit app screenshot here)
+
+## GUI App
+(Add your GUI app screenshot here)
+
+---
+
+# 🛠️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/BiswarupMajumdar/todo-app.git
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run Web App:
+
+```bash
+streamlit run web.py
+```
+
+Run GUI App:
+
+```bash
+python gui.py
+```
+
+---
+
+# 🌍 Live Demo
+
+Streamlit App:  
+(Add your deployed Streamlit link here)
+
+---
+
+# 📂 Project Structure
+
+```text
+├── database.py
+├── web.py
+├── gui.py
+├── todo.db
+├── requirements.txt
+├── README.md
+```
+
+---
+
+# 📌 Future Improvements
+
+- User authentication
+- Cloud database integration
+- Task categories
+- Notifications & reminders
+- AI-powered productivity insights
+
+---
+
+# 👨‍💻 Author
+
+**Biswarup Majumdar**  
+B.Tech in Information Technology
