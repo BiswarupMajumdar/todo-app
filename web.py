@@ -25,6 +25,9 @@ if "priority" not in st.session_state:
 if "due_date" not in st.session_state:
     st.session_state["due_date"] = date.today()
 
+if "completed_count" not in st.session_state:
+    st.session_state["completed_count"] = 0
+
 
 # =========================
 # 🔹 ADD TODO FUNCTION
@@ -80,24 +83,35 @@ def update_todo():
 # 🔹 COMPLETE TODO FUNCTION
 # =========================
 def delete_task(todo_id):
-    """Delete todo when checkbox is selected"""
+    """Delete task and increase progress"""
 
     updated_todos = [
         todo for todo in todos
         if todo["id"] != todo_id
     ]
 
+    # increase completed count
     st.session_state["completed_count"] += 1
+
     functions.write_todos(updated_todos)
 
 # =========================
 # 🔹 STATS CALCULATION
 # =========================
-total_tasks = len(todos)
-completed_tasks = sum(1 for t in todos if t["completed"])
-pending_tasks = total_tasks - completed_tasks
+# Total tasks originally created
+total_tasks = len(todos) + st.session_state["completed_count"]
 
-progress = completed_tasks / total_tasks if total_tasks > 0 else 0
+# Tasks deleted/completed
+completed_tasks = st.session_state["completed_count"]
+
+# Remaining tasks
+pending_tasks = len(todos)
+
+# Progress calculation
+progress = (
+    completed_tasks / total_tasks
+    if total_tasks > 0 else 0
+)
 
 
 # =========================
