@@ -1,0 +1,30 @@
+[
+    {
+        "id": "0494b31e-9552-4ee7-b51e-14d1dc84c76e",
+        "task": "Wake up",
+        "priority": "High",
+        "due_date": "2026-05-18",
+        "completed": true
+    },
+    {
+        "id": "bdcb448b-63ef-4c46-8ff5-405ba479eaa7",
+        "task": "brush teeth",
+        "priority": "High",
+        "due_date": "2026-05-18",
+        "completed": true
+    },
+    {
+        "id": "b044be94-9e2b-4490-8da4-c7126a4527c4",
+        "task": "Breakfast ",
+        "priority": "High",
+        "due_date": "2026-05-18",
+        "completed": false
+    },
+    {
+        "id": "bdd0b8ee-4834-413d-9f5c-994785067341",
+        "task": "Coding",
+        "priority": "High",
+        "due_date": "2026-05-18",
+        "completed": false
+    }
+]
